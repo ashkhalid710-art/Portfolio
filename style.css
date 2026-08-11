@@ -951,3 +951,275 @@ p,
   padding-top: clamp(8px, 1.5vw, 12px);
   color: var(--muted);
 }
+
+/* =========================================================
+   FINAL RESPONSIVE FIXES
+   ========================================================= */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+.container {
+  width: 100%;
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.hero-grid,
+.about-grid,
+.skills-grid,
+.projects-grid,
+.experience-list,
+.services-grid,
+.contact-grid,
+.footer-grid {
+  min-width: 0;
+}
+
+.hero-copy,
+.hero-panel,
+.about-copy,
+.about-stats,
+.skill-card,
+.project-card,
+.placeholder-card,
+.experience-card,
+.service-card,
+.contact-form,
+.contact-details {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.project-card p,
+.experience-card p,
+.service-card p,
+.skill-card p,
+.contact-details a {
+  overflow-wrap: anywhere;
+}
+
+.project-cta {
+  min-width: 0;
+}
+
+.project-cta .button {
+  max-width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .container {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-copy {
+    max-width: 760px;
+  }
+
+  .hero-panel {
+    width: 100%;
+  }
+
+  .about-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile + small tablets */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .hero-section {
+    min-height: auto;
+  }
+
+  .hero-grid {
+    gap: 32px;
+  }
+
+  .hero-actions {
+    width: 100%;
+  }
+
+  .hero-actions .button {
+    width: 100%;
+  }
+
+  .project-cta {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .project-cta .button {
+    width: 100%;
+  }
+
+  .skills-grid,
+  .experience-list,
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .projects-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-nav,
+  .footer-socials {
+    justify-content: center;
+  }
+}
+
+/* Phones */
+@media (max-width: 520px) {
+  .container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 10vw, 2.8rem);
+    line-height: 1.05;
+  }
+
+  h2 {
+    font-size: clamp(1.7rem, 8vw, 2.2rem);
+  }
+
+  .hero-title {
+    font-size: 1.1rem;
+  }
+
+  .hero-text,
+  .section-intro {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .button {
+    width: 100%;
+  }
+
+  .hero-panel,
+  .about-copy,
+  .about-stats,
+  .skill-card,
+  .project-card,
+  .experience-card,
+  .service-card,
+  .contact-form,
+  .contact-details {
+    padding: 18px;
+  }
+
+  .skills-grid,
+  .experience-list,
+  .services-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .projects-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .project-meta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .project-tags {
+    gap: 8px;
+  }
+
+  .project-tags span {
+    max-width: 100%;
+  }
+
+  .hero-socials {
+    flex-wrap: wrap;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 16px;
+  }
+
+  .nav-menu {
+    width: 100%;
+    max-width: 100%;
+    left: 0;
+    right: 0;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .hero-panel,
+  .about-copy,
+  .about-stats,
+  .skill-card,
+  .project-card,
+  .experience-card,
+  .service-card,
+  .contact-form,
+  .contact-details {
+    padding: 16px;
+  }
+
+  .button {
+    width: 100%;
+  }
+}
